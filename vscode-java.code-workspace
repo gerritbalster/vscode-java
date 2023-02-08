@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Log4JAndMockitoTests",
+			"path": "Log4JAndMockitoTests"
+		},
+		{
+			"name": "Sample",
+			"path": "Sample"
+		}
+	],
+	"settings": {}
+}

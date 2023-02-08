@@ -1,0 +1,38 @@
+<!--  
+	Level min -> max  DEBUG < INFO < WARN < ERROR < FATAL
+-->
+<Configuration>
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{dd.MM.yyyy HH:mm:ss,SSS} %-5p [%t, %M(), %C] %m%n" />
+		</Console>
+		<RollingFile
+			name="LOGFILE" fileName="${sys:logdir}\logfile.log" filePattern="${sys:logdir}\logfile.log.%i">
+		    <Policies>
+				<SizeBasedTriggeringPolicy size="100KB" />
+		    </Policies>
+			<PatternLayout pattern="%d{dd.MM.yyyy HH:mm:ss,SSS} %-5p [%t] %c{2} %m%n" />
+			<DefaultRolloverStrategy max="8"/>
+		</RollingFile>
+		<File
+			name="PROTOCOL" fileName="${sys:logdir}\protocol.log">
+			<PatternLayout pattern="%d{dd.MM.yyyy HH:mm:ss,SSS} %-5p [%t] %c{2} %m%n" />
+		</File>
+	</Appenders>
+	<Loggers>
+		<!-- Der Root-Logger schreibt die Logs aller definierten Logger ab Level DEBUG auf die Konsole 
+		     Der Level gilt dann auch für die anderen Logger -->
+		<Root level="DEBUG">
+			<AppenderRef ref="CONSOLE" />
+		</Root>
+		<!-- Über den Namen kann im Programmcode der Logger referenziert werden -->
+		<Logger name="logger">
+			<AppenderRef ref="LOGFILE" />
+		</Logger>
+		<!-- Über den Namen kann im Programmcode der Logger referenziert werden -->
+		<Logger name="protocol">
+			<AppenderRef ref="PROTOCOL" />
+		</Logger>
+	</Loggers>
+</Configuration>
+		
