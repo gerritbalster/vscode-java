@@ -18,7 +18,6 @@ import org.junit.Test;
 
 /**
  * @author xgadblt
- *
  */
 public class Log4JTest {
 
