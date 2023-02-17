@@ -9,7 +9,6 @@
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "vmArgs": "-Djava.util.logging.config.file=${workspaceFolder}\\logging.properties"
         }
     ]
 }
