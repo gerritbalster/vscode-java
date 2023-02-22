@@ -85,7 +85,7 @@ public class JavaNewFeatures {
 	@Test
 	void testExecutor() {
 
-		// Task mit 3s Verzögerung
+		// Task mit 3s Verzï¿½gerung
 		Executor ex = CompletableFuture.delayedExecutor( 3L, TimeUnit.SECONDS );
 		ex.execute( () -> System.out.println( "r1" ) );
 		try {
@@ -277,8 +277,8 @@ public class JavaNewFeatures {
 	}
 	
 	/******************************************************************************
-	 * Java 18 (Java 16 hat nur Finalisierungen von Previews, für Java 17 benötigt man die --preview-Option.
-	 * Die aktuelle Eclipse-Version 4.24 kann aber nur --preview für Java 18 setzen.)
+	 * Java 18 (Java 16 hat nur Finalisierungen von Previews, fï¿½r Java 17 benï¿½tigt man die --preview-Option.
+	 * Die aktuelle Eclipse-Version 4.24 kann aber nur --preview fï¿½r Java 18 setzen.)
 	 */
 	@SuppressWarnings("preview")
 	@Test

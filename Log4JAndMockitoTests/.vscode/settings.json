@@ -5,15 +5,12 @@
         "lib/**/*.jar"
     ],
     "java.test.config": [{
-    //     "name": "Java-Logging",
-    //     "vmArgs": ["-Djava.util.logging.config.file=${workspaceFolder}\\logging.properties"]
-    // }, {
         "name": "Log4J2-Logging",
         "vmArgs": ["-Dlog4j.configurationFile=${workspaceFolder}\\log4j2.xml", "-Dlogdir=c:\\Users\\xgadblt\\temp"]
     }],
     "java.test.defaultConfig": "Log4J2-Logging",
     "java.codeGeneration.generateComments": true,
-    "java.jdt.ls.java.home": "c:\\Program Files\\seu-java\\jdk11",
+    "java.jdt.ls.java.home": "c:\\Util\\jdk-18.0.2.1",
     "java.configuration.runtimes": []
 
 }
