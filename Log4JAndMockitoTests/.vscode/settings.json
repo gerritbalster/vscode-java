@@ -5,9 +5,9 @@
         "lib/**/*.jar"
     ],
     "java.test.config": [{
-        "name": "Java-Logging",
-        "vmArgs": ["-Djava.util.logging.config.file=${workspaceFolder}\\logging.properties"]
-    }, {
+    //     "name": "Java-Logging",
+    //     "vmArgs": ["-Djava.util.logging.config.file=${workspaceFolder}\\logging.properties"]
+    // }, {
         "name": "Log4J2-Logging",
         "vmArgs": ["-Dlog4j.configurationFile=${workspaceFolder}\\log4j2.xml", "-Dlogdir=c:\\Users\\xgadblt\\temp"]
     }],
