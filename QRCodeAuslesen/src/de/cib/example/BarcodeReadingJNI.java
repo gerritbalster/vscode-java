@@ -9,31 +9,37 @@ public class BarcodeReadingJNI {
 	 * Main
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main (String[] args) {
 		
 			// for testing dpi modes (min for testdocuments 96dpi)
 			String dpi = "150dpi";
 
-			
+			/*
+			 * Test args
+			 *
+			 */
 			String originalStringPath = ".\\input\\"+ args[0];	
-			readBarcodePDFM(originalStringPath, "json",dpi);
-			
+			readBarcodePDFM (originalStringPath, "xml",dpi);
 
-			// Test UTF-8 Input
-			/* 
+
+			/*
+			 * Test UTF-8 Input
+			 *
 			char a = (char)0x6f;
 			char b = (char)0x0308;
 			String rawString = "m" + a + b + "g";
-			originalStringPath = ".\\input\\"+ rawString+".pdf";	
+			String originalStringPath = ".\\input\\"+ rawString+".pdf";	
+			readBarcodePDFM(originalStringPath, "xml",dpi);
+			 */ 
 			
-			readBarcodePDFM(originalStringPath, "json",dpi);
+			/*
+			 * Test last known document
+			 * 
+			 String originalStringPath = ".\\input\\Beitritterkl+Anschr+KSV_GLS_Matrix.pdf";
+			 readBarcodePDFM (originalStringPath, "xml",dpi);
+			 */
 			
-			// Test last known document
-			originalStringPath = ".\\input\\Beitritterkl+Anschr+KSV_GLS_Matrix.pdf";
-			readBarcodePDFM(originalStringPath, "json",dpi);
-			*/
-			
-			System.out.println("Ende der Verarbeitung");
+			System.out.println ("Ende der Verarbeitung");
 						
 	}
 

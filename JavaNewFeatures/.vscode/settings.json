@@ -17,3 +17,12 @@
     "java.configuration.runtimes": []
 
 }
+
+
+
+
+"java.test.config": {
+    "name": "myconfig",
+    "vmArgs": ["-Dlogdir=c:\\Users\\xgadblt\\temp", "-Dlog4j.configurationFile=.\\log4j2.xml"]
+
+},

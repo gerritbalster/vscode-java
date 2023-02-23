@@ -6,18 +6,11 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch BarcodeReadingJNI",
+            "name": "Launch Kundenstammvertrag Linie.pdf",
             "request": "launch",
             "mainClass": "de.cib.example.BarcodeReadingJNI",
-            "projectName": "QRCodeAuslesen_11e9bb31"
-        },
-        {
-            "type": "java",
-            "name": "Launch Current File",
-            "request": "launch",
-            "mainClass": "${file}",
             "vmArgs": "-Djava.library.path=win64",
-            "args": "mög.pdf"
+            "args": "\"Kundenstammvertrag Linie.pdf\""
         }
     ]
 }
