@@ -48,7 +48,7 @@ public class JavaNewFeatures {
 	private static final String ALGORITHM = "Ed25519";
 
 	/******************************************************************************
-	 * Java 9
+	 * Java 9			
 	 */
 	@Test
 	void testAssert() throws Exception {
@@ -298,6 +298,7 @@ public class JavaNewFeatures {
 
 		Logger logger = Logger.getLogger( getClass().getName() );
 		logger.log( Level.FINE, nonNull( msg ) ? msg.toString() : "null", args );
+		// System.out.println (String.format (nonNull( msg ) ? msg.toString() : "null", args));
 	}
 
 }
