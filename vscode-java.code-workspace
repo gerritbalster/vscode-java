@@ -11,6 +11,10 @@
 	],
 	"settings": {
 		"java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable",
-		"editor.inlayHints.enabled": "off"
+    	"java.debug.settings.enableRunDebugCodeLens": false,
+	    "java.silentNotification": false,
+	    "java.codeGeneration.generateComments": true,
+	    "java.configuration.runtimes": [{"name": "JavaSE-19", "path": "c:\\util\\jdk-19.0.2"}],
+	    "java.test.config": {"vmArgs": ["-Djava.util.logging.config.file=logging.properties"]}
 	}
 }
