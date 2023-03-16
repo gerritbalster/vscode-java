@@ -8,4 +8,5 @@ module com.test {
 	requires org.junit.jupiter.api;
 	requires java.logging;
 	requires jdk.jfr;
+	requires jdk.incubator.concurrent;
 }

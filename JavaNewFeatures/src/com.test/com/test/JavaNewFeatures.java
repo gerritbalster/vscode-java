@@ -37,6 +37,8 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+import jdk.incubator.concurrent.StructuredTaskScope;
+import jdk.incubator.concurrent.StructuredTaskScope.ShutdownOnFailure;
 import jdk.jfr.Configuration;
 import jdk.jfr.consumer.RecordingStream;
 
@@ -194,8 +196,7 @@ public class JavaNewFeatures {
 			debug( "String hat nur blanks" );
 	}
 
-	private record TestRecord( String name, int age ) {
-	}
+	private record TestRecord( String name, int age ) {}
 
 	@Test
 	void testRecords() {
@@ -292,6 +293,27 @@ public class JavaNewFeatures {
 				default -> debug ("Something else");
 			}
 		});
+	}
+	
+	/******************************************************************************
+	 * Java 19
+	 */
+	@Test
+	void testStructuredConcurrency() throws Exception {
+		
+		try (ShutdownOnFailure scope = new StructuredTaskScope.ShutdownOnFailure()) {
+			scope.fork (() -> {
+				debug ("Thread 1");
+				return null;
+			});
+			scope.fork (() -> {
+				debug ("Thread 2");
+				return null;
+			});
+			scope.join();
+		} catch (InterruptedException e) {
+			throw e;
+		}
 	}
 	
 	private void debug( Object msg, Object... args ) {
