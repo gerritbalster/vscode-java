@@ -296,7 +296,7 @@ public class JavaNewFeatures {
 	}
 	
 	/******************************************************************************
-	 * Java 191
+	 * Java 1912
 	 */
 	@Test
 	void testStructuredConcurrency() throws Exception {
